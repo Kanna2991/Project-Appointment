@@ -1,0 +1,106 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input {
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 5px;
+}
+button{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid;
+  cursor: pointer;
+}
+.App-home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home button{
+  padding: 15px 20px;
+}
+.appointements .dates{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 15px;
+  text-align: center;
+}
+.appointements .info{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.appointements .info span{
+  padding: 6px;
+  background-color: lightgreen;
+  display: inline-block;
+}
+.appointements .info span.blocked{
+  background-color: red;
+}
+.appointements .dates > div{
+  width: 220px;
+}
+.appointements .dates h3 {
+  display: grid;
+  place-content: center;
+  margin: 0;
+}
+.appointements .dates .slots > div{
+  margin-top: 15px;
+}
+.appointements .dates .slots button{
+  background-color: lightgreen;
+  border: 1px solid greenyellow;
+}
+.appointements .dates .slots button.blocked{
+  background-color: red;
+  border: 1px solid lightsalmon;
+  cursor: not-allowed;
+  color: white;
+}
+.booking{
+  text-align: center;
+}
+.booking form{
+  width: max-content;
+  margin: auto;
+}
+.booking form > div{
+  margin: 15px 0;
+}
+.booking form input.invalid{
+  border: 1px solid red;
+}
+.error {
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  margin: 0;
+}
+.new-appointment{
+  display: flex;
+  justify-content: center;
+}
+.new-appointment div{
+  min-width: 50%;
+  margin: 15px 0;
+  text-align: left;
+}
+.new-appointment div:first-child{
+  text-align: right;
+  font-weight: bold;
+  padding-right: 5px;
+}
