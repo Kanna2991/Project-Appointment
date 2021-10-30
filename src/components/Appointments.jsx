@@ -1,5 +1,5 @@
-import moment from 'moment';
 import React from 'react';
+import moment from 'moment';
 import { withRouter } from 'react-router';
 
 const slots = ["09 AM - 11 AM", "11 AM - 01 PM", "02 PM - 04 PM", "04 PM - 06 PM", "06 PM - 08 PM"];
@@ -10,6 +10,7 @@ const dates = [{title: 'Today', date: moment().format('L')},
 function Appointments({history}){
     const appointments = JSON.parse(localStorage.getItem("ALL_APPOINTMENTS")) || [];
     const goToAppointment = (date, time) => {
+        if(availableCheck(date, time) === 'blocked') return;
         localStorage.setItem("SELECTED_APPOINTMENT", `${date}_${time}`);
         history.push('/book-appointment')
     }
